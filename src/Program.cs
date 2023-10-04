@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,5 +23,10 @@ if (app.Environment.IsDevelopment())
 
 app.MapGet("/greet", () => "hello there")
 .WithName("hi");
+
+app.MapGet("/live", () => Task.FromResult(new StatusCodeResult(404)))
+.WithName("live");
+
+
 
 app.Run();

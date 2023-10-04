@@ -24,9 +24,7 @@ if (app.Environment.IsDevelopment())
 app.MapGet("/greet", () => "hello there")
 .WithName("hi");
 
-app.MapGet("/live", () => Task.FromResult(new StatusCodeResult(404)))
+app.MapGet("/live", () => Results.NotFound("Agora não vai"))
 .WithName("live");
-
-
 
 app.Run();

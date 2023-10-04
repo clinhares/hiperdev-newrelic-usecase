@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-Clinhares
+  name: api-clinhares
   namespace: hiperdev
 spec:
   selector:
     matchLabels:
-      app: api-Clinhares
+      app: api-clinhares
   template:
     metadata:
       labels:
-        app: api-Clinhares
+        app: api-clinhares
     spec:
       containers:
-      - name: api-Clinhares
+      - name: api-clinhares
         image: hiperdevcr.azurecr.io/hiperdev
         resources:
           limits:

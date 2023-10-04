@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-clinhares
+  name: apiclinhares
   namespace: hiperdev
 spec:
   selector:
     matchLabels:
-      app: api-clinhares
+      app: apiclinhares
   template:
     metadata:
       labels:
-        app: api-clinhares
+        app: apiclinhares
     spec:
       containers:
-      - name: api-clinhares
-        image: hiperdevcr.azurecr.io/hiperdev
+      - name: apiclinhares
+        image: hiperdevcr.azurecr.io/apiclinhares
         resources:
           limits:
             memory: "128Mi"

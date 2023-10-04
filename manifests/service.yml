@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hiperdev-api-service
+  name: api-Clinhares-service
   namespace: hiperdev
 spec:
   selector:
-    app: hiperdev-api
+    app: api-Clinhares
   ports:
   - port: 80
     targetPort: 80
